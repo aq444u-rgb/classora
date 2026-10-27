@@ -1,0 +1,11 @@
+# Classora on Hostinger / Apache
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+<FilesMatch "^(index\.html|sw\.js|manifest\.webmanifest)$">
+  Header set Cache-Control "no-cache"
+</FilesMatch>
+
+AddType application/manifest+json .webmanifest
+AddType application/javascript .js

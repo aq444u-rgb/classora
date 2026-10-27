@@ -1,0 +1,39 @@
+CLASSORA - HOW TO PUBLISH, INSTALL AND TEACH LIVE
+==================================================
+
+What is in this folder
+  index.html            the Classora whiteboard (the app itself)
+  manifest.webmanifest  lets phones and laptops install it
+  sw.js                 makes it work offline after the first visit
+  icons/                the app icon
+  vendor/               PDF reader + live-class library (work offline)
+  _headers              Netlify settings so updates reach teachers
+
+Upload the WHOLE folder (not only index.html).
+
+PUBLISH (free) - pick one
+  Netlify: https://app.netlify.com/drop  -> drag this folder -> you get a link.
+  GitHub Pages / Cloudflare Pages also work (upload everything, keep folders).
+
+INSTALL
+  Laptop (Chrome/Edge): open your link, click "Install app" in the toolbar.
+  Android (Chrome): tap "Install app".   iPhone (Safari): Share > Add to Home Screen.
+
+TEACH LIVE (new)
+  1. Open Classora, click the red Live icon in the toolbar, then "Start live class".
+     Allow the microphone when asked.
+  2. Send the link (Copy link or WhatsApp). Students open it on their phone,
+     type their name and tap Join. Installing is optional for them.
+     STUDENT APP: students can install "Classora Class" from  yourlink/student/
+     (green icon). They open it, type the 6-letter class code and their name.
+  3. Students see your board live, hear your voice, can chat and raise a hand.
+     When a hand is raised, click "Allow mic" next to the name; the student can
+     then speak and everyone hears them. Click "Mute" to take the mic back.
+  4. Click "End class" when finished. Use Record board to save the lesson as a video.
+  Tips: use earphones (stops echo), keep the board writing large (Phone mode),
+  test with 2-3 students before a full class. The class works while your laptop
+  and the students' phones have internet. Everything is direct between devices,
+  so a very large class (30+) may be slow on a weak laptop connection.
+
+PUBLISHING AN UPDATE
+  Replace index.html, change "classora-v4" to "classora-v5" in sw.js, upload again.
